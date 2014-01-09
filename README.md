@@ -4,7 +4,7 @@ sphere-stock-xml-export
 This project contains a full functional product stock information export to create separate XMLs from each product stock information. The code supports all possible data points and will be used within an elastic.io workflow. It can be used to connect ERP systems as well as CRM tools to update product stock information between the different systems.
 
 ## How to develop
-[![Build Status](https://travis-ci.org/commercetools/sphere-stock-xml-export.png?branch=master)](https://travis-ci.org/commercetools/sphere-stock-xml-export)
+[![Build Status](https://travis-ci.org/svenmueller/sphere-stock-xml-export.png?branch=master)](https://travis-ci.org/svenmueller/sphere-stock-xml-export)
 
 Install the required dependencies
 
@@ -38,7 +38,7 @@ Specs are located under `/src/spec` folder and written as [Jasmine](http://pivot
 To run them execute
 
 ```bash
-jasmine-node --captureExceptions build/test
+grunt test
 ```
 
 or
@@ -48,3 +48,9 @@ npm test
 ```
 
 which will also execute `elastic.io`
+
+To run them on any file change
+
+```bash
+grunt watch:test
+```
