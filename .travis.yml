@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '0.10'
+before_script:
+- echo '{}' > ${HOME}/elastic.json
+- touch ${HOME}/.env
+- ./create_config.sh
+script:
+- npm test
+- elasticio cmp:process -p lib/services.js
+env:
+  global:
