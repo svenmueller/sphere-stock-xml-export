@@ -10,3 +10,6 @@ script:
 - elasticio cmp:process -p lib/services.js
 env:
   global:
+  - secure: cLZngx/MvWNY2+8yc18+4fxpo/d6m3BpEKO+kg3NORu7fA5RacDNCBcgAMQfmQLQgJ0yKpbCbKVvZ6gplLOSMMGc8N0x/5uDuPuGZaqDPL4cTJ4YQHo49yDVimxpygsfOQ4AdPsge2ZZhyQya29qDMETdcwXNaQGCNxTcE0oKVI=
+  - secure: eq0G7z600Bq+ymoK+VnEDLQNJkzfujcQ4CtqerZ/t6O+Igh4F6c94eoTeUb6mxsnbeuuP+S6VyWz6zZHxa1Hh+KnPPPVBmBPxbAaFUrHsN0HmCuTKugu7jQq/92zjsyYdT3gqjh1Twfzp3SvhjhvKllEedpRZ3v07TzKS3a3fn8=
+  - secure: dbRJgm5c8PlJOow0jIjM1ibaw9lAkMn5LE/IXIjl/s+AC7tBt2kmIfW5quF1a2JeoL1MwgpuCxNWbURhkoghPdBfVuFQZMllEbHUIRHHpKr5YHe5qHpQASlEMhHXdokHh+KVkKpzq6SLpCXPs6ay3+VyCDF6v3pvRBgK4YLZND8=
