@@ -20,12 +20,12 @@ Generate local `config.js` file (mustn't be under version control, therefore add
 Source files are written in `coffeescript`. Use [Grunt](http://gruntjs.com/) to build them
 
 ```bash
-grunt built|test|coverage
+grunt build
 ```
 
-This will generate source files into `./build` folder.
+The generated source files are located in `/build`.
 
-Make sure to setup the correct environment for `elastic.io` integration
+Make sure to setup the environment for `elastic.io` integration
 
 ```bash
 echo '{}' > ${HOME}/elastic.json && touch ${HOME}/.env
@@ -33,9 +33,9 @@ echo '{}' > ${HOME}/elastic.json && touch ${HOME}/.env
 
 ### Specs
 
-Specs are located under `./src/spec` folder and written as [Jasmine test](http://pivotal.github.io/jasmine/).
+Specs are located under `/src/spec` folder and written as [Jasmine](http://pivotal.github.io/jasmine/) test.
 
-To run them simply execute
+To run them execute
 
 ```bash
 jasmine-node --captureExceptions build/test
@@ -47,4 +47,4 @@ or
 npm test
 ```
 
-which will also execute `elasticio`
+which will also execute `elastic.io`
