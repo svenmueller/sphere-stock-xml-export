@@ -4,10 +4,20 @@ node_js:
 before_script:
 - echo '{}' > ${HOME}/elastic.json
 - touch ${HOME}/.env
+- npm install -g grunt-cli
 - ./create_config.sh
 script:
 - npm test
-- elasticio cmp:process -p lib/services.js
+- node lib/run.js
+- elasticio cmp:process -p elasticio.js
+notifications:
+  hipchat:
+    rooms:
+    template:
+      - '%{repository}#%{build_number} (%{author}): %{message} (<a href="%{build_url}">Details</a> <a href="%{compare_url}">Compare</a>)'
+    format: html
+    on_success: change
+    on_failure: change
 env:
   global:
   - secure: cLZngx/MvWNY2+8yc18+4fxpo/d6m3BpEKO+kg3NORu7fA5RacDNCBcgAMQfmQLQgJ0yKpbCbKVvZ6gplLOSMMGc8N0x/5uDuPuGZaqDPL4cTJ4YQHo49yDVimxpygsfOQ4AdPsge2ZZhyQya29qDMETdcwXNaQGCNxTcE0oKVI=
