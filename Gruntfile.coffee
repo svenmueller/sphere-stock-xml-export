@@ -10,21 +10,8 @@ module.exports = (grunt)->
       banner: "/* ===========================================================\n" +
         "# <%= pkg.name %> - v<%= pkg.version %>\n" +
         "# ==============================================================\n" +
-        "# Copyright (C) 2013 <%= pkg.author.name %>\n" +
-        "#\n" +
-        "# This program is free software; you can redistribute it and/or modify\n" +
-        "# it under the terms of the GNU General Public License as published by\n" +
-        "# the Free Software Foundation; either version 2 of the License, or\n" +
-        "# (at your option) any later version.\n" +
-        "#\n" +
-        "# This program is distributed in the hope that it will be useful,\n" +
-        "# but WITHOUT ANY WARRANTY; without even the implied warranty of\n" +
-        "# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n" +
-        "# GNU General Public License for more details.\n" +
-        "#\n" +
-        "# You should have received a copy of the GNU General Public License along\n" +
-        "# with this program; if not, write to the Free Software Foundation, Inc.,\n" +
-        "# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.\n" +
+        "# Copyright (C) 2014 <%= pkg.author.name %>\n" +
+        "# Licensed under the MIT license.\n" +
         "*/\n"
 
     coffeelint:
@@ -95,13 +82,13 @@ module.exports = (grunt)->
   # load plugins that provide the tasks defined in the config
   grunt.loadNpmTasks "grunt-coffeelint"
   grunt.loadNpmTasks "grunt-contrib-clean"
-  grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-coffee"
+  grunt.loadNpmTasks "grunt-contrib-concat"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-shell"
   grunt.loadNpmTasks "grunt-bump"
 
   # register tasks
   grunt.registerTask "build", ["clean", "coffeelint", "coffee", "concat"]
-  grunt.registerTask "test", ["build", "shell:jasmine"]
   grunt.registerTask "coverage", ["build", "shell:coverage"]
+  grunt.registerTask "test", ["build", "shell:jasmine"]
