@@ -1,7 +1,7 @@
 sphere-stock-xml-export
 =======================
 
-This project contains a full functional product stock information export to create separate XMLs from each product stock information. The code supports all possible data points and will be used within an elastic.io workflow. It can be used to connect ERP systems as well as CRM tools to update product stock information between the different systems.
+This project contains a full functional inventory export to create one XML file containing all product stock information. The code supports all possible data points and can be used within an elastic.io workflow or as command line tool. It can be used to connect ERP systems as well as CRM tools to update product stock information between the different systems.
 
 ## How to develop
 [![Build Status](https://travis-ci.org/svenmueller/sphere-stock-xml-export.png?branch=master)](https://travis-ci.org/svenmueller/sphere-stock-xml-export)
@@ -23,7 +23,7 @@ Source files are written in `coffeescript`. Use [Grunt](http://gruntjs.com/) to 
 grunt build
 ```
 
-The generated source files are located in `/build`.
+The generated source files are located in `/lib`.
 
 Make sure to setup the environment for `elastic.io` integration
 
@@ -33,7 +33,7 @@ echo '{}' > ${HOME}/elastic.json && touch ${HOME}/.env
 
 ### Specs
 
-Specs are located under `/src/spec` folder and written as [Jasmine](http://pivotal.github.io/jasmine/) test.
+Specs are located under `/src/spec` and written as [Jasmine](http://pivotal.github.io/jasmine/) test.
 
 To run them execute
 
