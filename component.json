@@ -1,0 +1,11 @@
+{
+  "title": "sphere-order-xml-import",
+  "description": "Exports stock quantity information for each product using XML format.",
+  "actions": {
+    "services": {
+      "title": "Sphere Stock XML Export",
+      "main": "./lib/services.js",
+      "title": "Stock XML Export"
+    }
+  }
+}
