@@ -45,7 +45,9 @@ To run them on any file change
 grunt watch:test
 ```
 
-Trigger export via command line.
+## How to run
+
+### Command line
 ```
 node lib/run.js --projectKey ${SPHERE_PROJECT_KEY} --clientId ${SPHERE_CLIENT_ID} --clientSecret ${SPHERE_CLIENT_SECRET} --output out.xml
 ```
