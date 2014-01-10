@@ -29,7 +29,7 @@ echo '{}' > ${HOME}/elastic.json && touch ${HOME}/.env
 node lib/run.js --projectKey ${SPHERE_PROJECT_KEY} --clientId ${SPHERE_CLIENT_ID} --clientSecret ${SPHERE_CLIENT_SECRET} --output out.xml
 ```
 
-### Specs
+### How to test
 
 Generate local `config.js` file (mustn't be under version control, therefore it is added to `.gitignore`). Put project credentials in generated `config.js`. The credentials will be required for integration tests.
 ```bash
