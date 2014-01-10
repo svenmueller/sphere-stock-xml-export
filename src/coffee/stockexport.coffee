@@ -18,7 +18,7 @@ class StockExport extends CommonUpdater
     @
 
   ###
-  Fetch inventory items from Sphere and export xml files for all inventory items.
+  Fetch inventory items from Sphere and export a single xml file containing all inventory information.
   @param {string} msg The message to process.
   @param {hash} cfg The component's configuration.
   @param {function} next The callback function to be invoked when the component finished its work.
@@ -29,7 +29,7 @@ class StockExport extends CommonUpdater
     @returnResult false, 'Not yet implemented', next
 
   ###
-  Fetch inventory items from Sphere and create xml for all inventory items.
+  Fetch inventory items from Sphere and create a single xml file containing all inventory information.
   @param {function} callback The callback function to be invoked when the method finished its work.
   @return The result of the callback.
   ###
@@ -46,7 +46,7 @@ class StockExport extends CommonUpdater
       @returnResult false, msg, callback
 
   ###
-  Creates an XML instance.
+  Creates a plain XML instance.
   @return {number} The result of adding num1 and num2.
   ###
   createXml: () ->
