@@ -8,12 +8,14 @@ before_script:
 - ./create_config.sh
 script:
 - npm test
-- node lib/run.js --projectKey ${SPHERE_PROJECT_KEY} --clientId ${SPHERE_CLIENT_ID} --clientSecret ${SPHERE_CLIENT_SECRET} --output out.xml
+- node lib/run.js --projectKey ${SPHERE_PROJECT_KEY} --clientId ${SPHERE_CLIENT_ID}
+  --clientSecret ${SPHERE_CLIENT_SECRET} --output out.xml
 notifications:
   hipchat:
-    rooms:
+    rooms: 
     template:
-      - '%{repository}#%{build_number} (%{author}): %{message} (<a href="%{build_url}">Details</a> <a href="%{compare_url}">Compare</a>)'
+    - ! '%{repository}#%{build_number} (%{author}): %{message} (<a href="%{build_url}">Details</a>
+      <a href="%{compare_url}">Compare</a>)'
     format: html
     on_success: change
     on_failure: change
@@ -21,4 +23,4 @@ env:
   global:
   - secure: cLZngx/MvWNY2+8yc18+4fxpo/d6m3BpEKO+kg3NORu7fA5RacDNCBcgAMQfmQLQgJ0yKpbCbKVvZ6gplLOSMMGc8N0x/5uDuPuGZaqDPL4cTJ4YQHo49yDVimxpygsfOQ4AdPsge2ZZhyQya29qDMETdcwXNaQGCNxTcE0oKVI=
   - secure: eq0G7z600Bq+ymoK+VnEDLQNJkzfujcQ4CtqerZ/t6O+Igh4F6c94eoTeUb6mxsnbeuuP+S6VyWz6zZHxa1Hh+KnPPPVBmBPxbAaFUrHsN0HmCuTKugu7jQq/92zjsyYdT3gqjh1Twfzp3SvhjhvKllEedpRZ3v07TzKS3a3fn8=
-  - secure: dbRJgm5c8PlJOow0jIjM1ibaw9lAkMn5LE/IXIjl/s+AC7tBt2kmIfW5quF1a2JeoL1MwgpuCxNWbURhkoghPdBfVuFQZMllEbHUIRHHpKr5YHe5qHpQASlEMhHXdokHh+KVkKpzq6SLpCXPs6ay3+VyCDF6v3pvRBgK4YLZND8=
+  - secure: KxM59wAUKoFIJ2ZN0TD7Qj2Eb9MlZK7p+v/OmjYPFb2RxkKydv3Sd8en2n2ffLX8Orv/Qntj5wHfBTGTa9MkYwMInGfcgkixCZh/IPUMQwcpDIl6b7/yS2V8zqeuig8gzCvJlAteo7yHyBBcIto9eWLWnki584/m+C2LWKq1q4Q=
