@@ -12,7 +12,8 @@ script:
   --clientSecret ${SPHERE_CLIENT_SECRET} --output out.xml
 notifications:
   hipchat:
-    rooms: 
+    rooms:
+      secure: qI9x6s4eS8zBB4yz5Qgpk66+E4879Q9XP9BnIRYDwHfCRaGvq/H2b3E78gtCDwAhJO+OyoJz5ciScULjx9Y32KaT0x4OdgdIrfJuvpNJBObaveuov8rgEE7vd8JxW5SpugEhW7eebLbxDac8HEZ/wG83IXs3TRXMiPCT1ZdB9GY=
     template:
     - ! '%{repository}#%{build_number} (%{author}): %{message} (<a href="%{build_url}">Details</a>
       <a href="%{compare_url}">Compare</a>)'
