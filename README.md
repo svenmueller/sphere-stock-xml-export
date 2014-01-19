@@ -1,7 +1,7 @@
 sphere-stock-xml-export
 =======================
 
-[![Build Status](https://travis-ci.org/svenmueller/sphere-stock-xml-export.png?branch=master)](https://travis-ci.org/svenmueller/sphere-stock-xml-export)
+[![Build Status](https://travis-ci.org/svenmueller/sphere-stock-xml-export.png?branch=master)](https://travis-ci.org/svenmueller/sphere-stock-xml-export) [![Dependency Status](https://david-dm.org/svenmueller/sphere-stock-xml-export.png?theme=shields.io)](https://david-dm.org/svenmueller/sphere-stock-xml-export) [![devDependency Status](https://david-dm.org/svenmueller/sphere-stock-xml-export/dev-status.png?theme=shields.io)](https://david-dm.org/svenmueller/sphere-stock-xml-export#info=devDependencies)
 
 This project contains a full functional inventory export component. It outputs a single XML file containing all product stock information. The code supports all possible data points and can be used within an `elastic.io` workflow or as command line tool. It can be used to connect ERP systems as well as CRM tools to update product stock information between the different systems.
 
